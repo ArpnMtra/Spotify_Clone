@@ -4,6 +4,7 @@ let songs = [];
 let masterSongs = [];
 let songHistory = [];
 let currFolder = "";
+let playButton;
 
 /* =========================================================
    STATIC MUSIC LIBRARY
@@ -291,7 +292,7 @@ async function main() {
        ELEMENT REFERENCES
        ===================================================== */
 
-    const playButton =
+    playButton =
         document.getElementById("play");
 
     const previousButton =
