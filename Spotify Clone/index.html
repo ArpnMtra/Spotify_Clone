@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Spotify - Web Player:</title>
+</head>
+
+<body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m1 p1">
+                <div class="logo"><img class="invert" src="logo.svg" alt="">
+                    <span class="logo-text">Spotify</span>
+                </div>
+
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="home">Home</li>
+                    <!-- Added id="searchTab" and inline cursor style here -->
+                    <li id="searchTab" style="cursor: pointer;"><img class="invert" src="search.svg" alt="search">Search
+                    </li>
+                </ul>
+
+                <!-- Hidden search input container that opens when Search is clicked -->
+                <div class="search-container" id="searchContainer" style="display: none;">
+                    <input type="text" id="searchInput" placeholder="Search songs or artists...">
+                </div>
+            </div>
+            <div class="library bg-grey rounded m1 p1">
+                <div id="libraryBtn" class="heading"> <img class="invert" src="plusimg.svg" alt="library">
+                    <h2>
+                        Your Library
+                    </h2>
+
+                </div>
+                <div class="songList">
+                    <ul>
+                        <li>
+                            <img class="invert" src="music.svg" alt="">
+                            <div class="info">
+                                <div>Song Name</div>
+                                <div>Song Artist</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="bottomplaybtn.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety &amp; Privacy Center</a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav"></div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+                <!-- ----------------------Hidden Login page--------------------- -->
+
+                <!-- Login Modal Overlay -->
+                <div id="loginModal" class="login-modal" style="display: none;">
+                    <div class="login-modal-content">
+                        <!-- Close button -->
+                        <span id="closeLogin" class="close-btn">&times;</span>
+
+                        <!-- Spotify Logo & Heading -->
+                        <img class="modal-logo invert" src="logo.svg" alt="Spotify">
+                        <h2>Welcome back</h2>
+
+                        <!-- Email Form -->
+                        <div class="login-form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" placeholder="Email">
+                            <button class="btn-continue">Continue</button>
+                        </div>
+
+                        <div class="login-divider">
+                            <span>or</span>
+                        </div>
+
+                        <!-- Social Login Buttons -->
+                        <div class="social-login-btns">
+                            <button class="social-btn"><img src="phone.svg" alt="Phone"> Continue with phone
+                                number</button>
+                            <button class="social-btn"><img src="google.svg" alt="Google"> Continue with Google</button>
+                            <button class="social-btn"><img src="facebook.svg" alt="Facebook"> Continue with
+                                Facebook</button>
+                            <button class="social-btn"><img src="apple.svg" alt="Apple"> Continue with Apple</button>
+                        </div>
+
+                        <!-- Footer link -->
+                        <div class="login-footer">
+                            <p>Don't have an account? <a href="#">Sign up</a></p>
+                            <small>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and
+                                <a href="#">Terms of Service</a> apply.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ---------------------------Ends Here-------------------------------- -->
+            </div>
+            <div class="SpotifyPlaylists">
+                <h1>Trending Songs</h1>
+                <div class="CardContainer">
+
+                    <!-- Card 1: Connected to your Fossils folder -->
+                    <div class="card" data-folder="Fossils all songs">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#1ed760" stroke="#1ed760" stroke-width="1.5">
+                                </circle>
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d0000e1a3e4e1599dbcb663ce3eb20fa1" alt="">
+                        <h2>Fossils All Songs</h2>
+                        <span>Album</span>
+                    </div>
+
+                    <!-- Card 2: Connected to your Kabir Singh folder -->
+                    <div class="card" data-folder="Kabir Singh all songs">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#1ed760" stroke="#1ed760" stroke-width="1.5">
+                                </circle>
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <img src="https://mosaic.scdn.co/300/ab67616d00001e0290d98409f70719daa0dc0421ab67616d00001e02ba03ff79dad25f7c3542382fab67616d00001e02c5545f737b16ad5ee767b62aab67616d00001e02ce1f4349305971b5beb75fcd" alt="">
+                        <h2>Kabir Singh All Songs</h2>
+                        <span>Album</span>
+                    </div>
+
+                    <!-- Card 3: Prithibi all songs folder -->
+                     <div class="card" data-folder="Prithibi all songs">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#1ed760" stroke="#1ed760" stroke-width="1.5">
+                                </circle>
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/7xNjAAHJLyEjZCbxzBlQJ7/en" alt="">
+                        <h2>Prithibi</h2>
+                        <span>Album</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Playbar Section -->
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle"></div>
+                </div>
+                <div class="abovebar">
+                    <div class="songinfo"></div>
+                    <div class="songbtns">
+                        <img id="shuffle" src="shuffle.svg" alt="">
+                        <img id="previous" src="prevbtn.svg" alt="">
+                        <img id="play" src="bottomplaybtn.svg" alt="">
+                        <img id="next" src="nextbtn.svg" alt="">
+                        <img id="repeat" src="repeatbtn.svg" alt="">
+                    </div>
+                    <div class="songtime"></div>
+                </div>
+            </div>
+
+        </div> <!-- Closes .right container -->
+        <script src="script.js"></script>
+</body>
+
+</html>

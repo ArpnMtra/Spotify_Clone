@@ -1,0 +1,235 @@
+*{
+    margin: 0;  
+    padding: 0;
+}
+body{
+    background: #000;
+    color: white;
+}
+.border{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+.left{
+    width: 25vw ;
+    padding: 10px;
+}
+.right{
+    width: 75vw;
+}
+
+.home ul li{
+    display: flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.home{
+    padding: 10px;
+}
+.heading{
+    display: flex;
+    gap: 15px;
+    width: 100px;
+    padding-top: 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+.heading img{
+    width: 30px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 3px; /* Adjust this to change the space between the logo and text */
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    color: gray;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+.footer a{
+    text-decoration: none;
+    color: gray;
+}
+.right{
+    margin: 16px 0; /*because no need of the side margin only from top is needed*/
+    position: relative;
+}
+.library{
+    min-height: 80vh;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(33, 33, 33);
+    height: 72px;
+}
+.header > *{
+    padding: 20px;
+}
+.SpotifyPlaylists{
+    padding: 16px;
+}
+.CardContainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px;
+    overflow: scroll;
+    max-height: 70vh;
+}
+.card{
+    width: 200px ;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+}
+.card > *{
+    padding-top: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.play{
+    position: absolute;
+    top: 170px;
+    right:16px;
+    transform: scale(1.5);
+}
+.play:hover {
+    transform: scale(1.06);
+}
+.buttons > *{
+    margin: 0 12px;
+}
+.signupbtn{
+    background-color: rgb(33, 33, 33);
+    color: rgb(156, 148, 148);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.signupbtn:hover{
+    font-size: 17px;
+    color: white;
+
+}
+.loginbtn{
+   background-color: white;
+   border-radius: 21px;
+   color: black;
+   padding: 10px;
+   width: 79px;
+   cursor: pointer;
+   font-size: 16px;
+}
+.loginbtn:hover{
+   font-weight: bold;
+   font-size: 17px;
+}
+.playbar{
+    position: fixed;
+    bottom: 26px;
+    filter: invert(1);
+    background-color: #dad5d5;
+    border-radius: 10px;
+    width: 94.5%;
+    padding: 12px;
+    width: 70vw;
+    height: 40px;
+    
+}
+
+
+.songbtns{
+   display: flex;
+   justify-content: center;
+   gap: 12px;
+}
+.songList ul {
+    padding: 0 12px; 
+}
+
+.songList ul li {
+    list-style-type: decimal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 10px 0;
+    padding: 10px 12px; 
+    border-radius: 5px;
+}
+
+.songList ul li .info {
+    flex: 1; 
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.playnow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.playnow span {
+    font-size: 13px;
+    width: auto; 
+    padding: 0;
+}
+.songList {
+    max-height: 60vh;       
+    overflow-y: auto;       /* Adding a clean scrollbar so that i can add or list more songs */
+    margin-bottom: 60px;    
+}
+.seekbar {
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    /* Centers the circle perfectly on the 4px height line */
+    bottom: 4px; 
+    left: 0%;
+    /* Smooths out the movement so it doesn't jump between seconds */
+    transition: left 0.1s linear; 
+}
+.songbtns img{
+    cursor: pointer;
+}
+

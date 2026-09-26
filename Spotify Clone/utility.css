@@ -1,0 +1,250 @@
+.border{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}   
+.invert{
+    filter: invert(1);
+} 
+.bg-grey{
+    background-color: #121212;
+}
+.rounded{
+    border-radius: 7px;
+}
+.m1{
+    margin: 5px;
+}
+.p1{
+    padding: 10px;
+}
+
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 12px;  /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; /* Dark background matching Spotify's dark theme */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2a2a; /* Dark gray handle */
+    border-radius: 6px;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a; /* Lighter gray when hovering over the scrollbar */
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a #121212; /* thumb color and track color */
+}
+
+/* Smooth transition for hover and active states */
+.songList ul li {
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.songList ul li:hover {
+    background-color: #222222; /* Slightly lighter dark background */
+    border-color: #1ed760;     /* Turns the border Spotify-green on hover */
+    transform: scale(1.01);    /* Tiny zoom effect */
+}
+
+/* Active / Playing effect (triggered when the song is selected) */
+.songList ul li.active {
+    background-color: #282828;
+    border-color: #1ed760;     /* Keeps the border Spotify-green */
+    box-shadow: 0 4px 12px rgba(30, 215, 96, 0.2); /* Soft green glow */
+}
+.songinfo, .songtime{
+    color: black;
+    padding: 0 12px;
+
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px; 
+}
+
+.abovebar > div {
+    width: 33.33%; 
+}
+
+/* Target your song name container (whichever class you use for the text on the left) */
+.abovebar .songinfo, 
+.abovebar div:first-child {
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis;  
+    font-size: 14px;
+}
+.songtime {
+    text-align: right;
+    font-size: 13px;
+}
+
+-------------------------
+.songList {
+    max-height: 45vh;        
+    overflow-y: auto;        
+    margin-top: 15px;    
+    margin-bottom: 20px; 
+    padding-right: 4px;   
+}
+
+.songList ul {
+    padding: 0 8px; 
+}
+
+.songList ul li {
+    list-style: none; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    /* Rich gradient background */
+    background: linear-gradient(135deg, #1a1a1a 0%, #282828 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Compact margins and padding to preserve the scrollable UI area */
+    margin: 8.6px 0;
+    padding: 8px 10px; 
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden; 
+    transition: all 0.25s ease;
+}
+
+/* Left Accent Bar */
+.songList ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #1ed760, #1db954);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+/* Hover Effects */
+.songList ul li:hover {
+    background: linear-gradient(135deg, #222222 0%, #1db95420 100%);
+    border-color: #1ed760; 
+    transform: translateX(3px) translateY(-1px); 
+    box-shadow: 0 6px 18px rgba(29, 185, 84, 0.2); 
+}
+
+.songList ul li:hover::before {
+    opacity: 1; 
+}
+
+.songList ul li img.invert {
+    width: 20px;
+    height: 20px;
+}
+
+.songList ul li .info {
+    flex: 1; 
+    font-size: 14px; 
+    overflow: hidden; 
+}
+
+/* Song Title Styling */
+.songList ul li .info div:first-child {
+    font-weight: 500; 
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+/* Artist Subtitle Styling */
+.songList ul li .info div:last-child {
+    font-size: 12px; 
+    color: #a7a7a7; 
+    margin-top: 3px;
+}
+
+/* Play Now action button */
+.playnow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.songList ul li:hover .playnow {
+    opacity: 1; 
+}
+
+.playnow span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.playnow img {
+    width: 22px;
+    height: 22px;
+}
+
+.library .heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 24px; 
+}
+
+.search-container {
+    margin: 12px 8px;
+}
+
+#searchInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    background-color: #242424;
+    border: 1px solid #3e3e3e;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#searchInput:focus {
+    border-color: #1ed760;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 8px rgba(29, 185, 84, 0.3);
+}
+
+#searchInput::placeholder {
+    color: #a7a7a7;
+}
